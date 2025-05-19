@@ -1,11 +1,215 @@
-commit: bc5c1417
+commit: 4b5d36ab
 
 estree_test262 Summary:
-AST Parsed     : 44047/44047 (100.00%)
-Positive Passed: 44038/44047 (99.98%)
+AST Parsed     : 43948/43948 (100.00%)
+Positive Passed: 43828/43948 (99.73%)
+Mismatch: tasks/coverage/test262/test/built-ins/AsyncFunction/is-a-constructor.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/AsyncGeneratorFunction/is-a-constructor.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Atomics/exchange/non-shared-int-views-throws.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Atomics/load/validate-arraytype-before-index-coercion.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Atomics/or/non-shared-int-views-throws.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Atomics/wait/validate-arraytype-before-timeout-coercion.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Atomics/wait/validate-arraytype-before-value-coercion.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Atomics/waitAsync/validate-arraytype-before-value-coercion.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Atomics/xor/non-shared-bufferdata.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Atomics/xor/non-shared-int-views-throws.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/GeneratorFunction/is-a-constructor.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/String/fromCodePoint/argument-is-Symbol.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/String/fromCodePoint/argument-is-not-integer.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/String/fromCodePoint/argument-not-coercible.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/String/fromCodePoint/arguments-is-empty.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/String/fromCodePoint/number-is-out-of-range.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/String/fromCodePoint/return-string-value.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/String/fromCodePoint/to-number-conversions.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/Duration/prototype/round/relativeto-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/Duration/prototype/total/precision-exact-mathematical-values-5.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/Duration/prototype/total/relativeto-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/Duration/prototype/total/relativeto-propertybag-invalid-offset-string.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDate/calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDate/compare/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDate/from/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDate/prototype/equals/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDate/prototype/since/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDate/prototype/until/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDate/prototype/withCalendar/calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDateTime/calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDateTime/compare/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDateTime/from/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDateTime/prototype/equals/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDateTime/prototype/since/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDateTime/prototype/until/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainDateTime/prototype/withCalendar/calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainMonthDay/calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainMonthDay/from/argument-propertybag-calendar-iso-string.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainMonthDay/from/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainMonthDay/prototype/equals/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainYearMonth/calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainYearMonth/compare/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainYearMonth/from/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainYearMonth/prototype/equals/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainYearMonth/prototype/since/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/PlainYearMonth/prototype/until/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/ZonedDateTime/calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/ZonedDateTime/compare/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/ZonedDateTime/from/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/ZonedDateTime/prototype/equals/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/ZonedDateTime/prototype/since/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/ZonedDateTime/prototype/until/argument-propertybag-calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/Temporal/ZonedDateTime/prototype/withCalendar/calendar-wrong-type.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/isFinite/prop-desc.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/isNaN/prop-desc.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/parseFloat/prop-desc.js
+
+Mismatch: tasks/coverage/test262/test/built-ins/parseInt/prop-desc.js
+
+Mismatch: tasks/coverage/test262/test/harness/verifyProperty-value-error.js
+
+Mismatch: tasks/coverage/test262/test/intl402/DateTimeFormat/canonicalize-utc-timezone.js
+
+Mismatch: tasks/coverage/test262/test/intl402/DateTimeFormat/prototype/format/dayPeriod-long-en.js
+
+Mismatch: tasks/coverage/test262/test/intl402/DateTimeFormat/prototype/format/dayPeriod-narrow-en.js
+
+Mismatch: tasks/coverage/test262/test/intl402/DateTimeFormat/prototype/format/dayPeriod-short-en.js
+
+Mismatch: tasks/coverage/test262/test/intl402/DateTimeFormat/prototype/formatRangeToParts/to-datetime-formattable-with-different-arg-kinds.js
+
+Mismatch: tasks/coverage/test262/test/intl402/DateTimeFormat/prototype/formatToParts/dayPeriod-long-en.js
+
+Mismatch: tasks/coverage/test262/test/intl402/DateTimeFormat/prototype/formatToParts/dayPeriod-narrow-en.js
+
+Mismatch: tasks/coverage/test262/test/intl402/DateTimeFormat/prototype/formatToParts/dayPeriod-short-en.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Locale/getters.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Locale/prototype/region/prop-desc.js
+
+Mismatch: tasks/coverage/test262/test/intl402/NumberFormat/currency-digits-nonstandard-notation.js
+
+Mismatch: tasks/coverage/test262/test/intl402/PluralRules/constructor-option-read-order.js
+
+Mismatch: tasks/coverage/test262/test/intl402/PluralRules/constructor-options-throwing-getters.js
+
+Mismatch: tasks/coverage/test262/test/intl402/PluralRules/default-options-object-prototype.js
+
+Mismatch: tasks/coverage/test262/test/intl402/PluralRules/prototype/resolvedOptions/order.js
+
+Mismatch: tasks/coverage/test262/test/intl402/PluralRules/prototype/resolvedOptions/properties.js
+
+Mismatch: tasks/coverage/test262/test/intl402/PluralRules/prototype/resolvedOptions/return-keys-order-default.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/Instant/prototype/toLocaleString/dateStyle.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/Instant/prototype/toLocaleString/options-conflict.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainDate/prototype/toLocaleString/dateStyle.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainDate/prototype/toLocaleString/options-conflict.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainDate/prototype/weekOfYear/non-iso-week-of-year.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainDate/prototype/yearOfWeek/non-iso-week-of-year.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainDateTime/prototype/toLocaleString/dateStyle.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainDateTime/prototype/toLocaleString/options-conflict.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainDateTime/prototype/weekOfYear/non-iso-week-of-year.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainDateTime/prototype/yearOfWeek/non-iso-week-of-year.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainMonthDay/prototype/toLocaleString/dateStyle.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainTime/prototype/toLocaleString/options-conflict.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/PlainYearMonth/prototype/toLocaleString/dateStyle.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/ZonedDateTime/construct-non-utc-non-iso.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/ZonedDateTime/prototype/toLocaleString/dateStyle.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/ZonedDateTime/prototype/toLocaleString/options-conflict.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/ZonedDateTime/prototype/weekOfYear/non-iso-week-of-year.js
+
+Mismatch: tasks/coverage/test262/test/intl402/Temporal/ZonedDateTime/prototype/yearOfWeek/non-iso-week-of-year.js
+
 Mismatch: tasks/coverage/test262/test/language/expressions/assignment/fn-name-lhs-cover.js
 
 Mismatch: tasks/coverage/test262/test/language/expressions/assignment/target-cover-id.js
+
+Mismatch: tasks/coverage/test262/test/language/expressions/async-arrow-function/prototype.js
+
+Mismatch: tasks/coverage/test262/test/language/expressions/greater-than/S11.8.2_A4.12_T1.js
+
+Mismatch: tasks/coverage/test262/test/language/expressions/greater-than/S11.8.2_A4.12_T2.js
+
+Mismatch: tasks/coverage/test262/test/language/expressions/greater-than-or-equal/S11.8.4_A4.12_T1.js
+
+Mismatch: tasks/coverage/test262/test/language/expressions/greater-than-or-equal/S11.8.4_A4.12_T2.js
+
+Mismatch: tasks/coverage/test262/test/language/expressions/less-than/S11.8.1_A4.12_T1.js
+
+Mismatch: tasks/coverage/test262/test/language/expressions/less-than/S11.8.1_A4.12_T2.js
+
+Mismatch: tasks/coverage/test262/test/language/expressions/less-than-or-equal/S11.8.3_A4.12_T1.js
+
+Mismatch: tasks/coverage/test262/test/language/expressions/less-than-or-equal/S11.8.3_A4.12_T2.js
 
 Mismatch: tasks/coverage/test262/test/language/expressions/postfix-decrement/target-cover-id.js
 
@@ -14,6 +218,24 @@ Mismatch: tasks/coverage/test262/test/language/expressions/postfix-increment/tar
 Mismatch: tasks/coverage/test262/test/language/expressions/prefix-decrement/target-cover-id.js
 
 Mismatch: tasks/coverage/test262/test/language/expressions/prefix-increment/target-cover-id.js
+
+Mismatch: tasks/coverage/test262/test/language/module-code/import-attributes/allow-nlt-before-with.js
+
+Mismatch: tasks/coverage/test262/test/language/module-code/import-attributes/import-attribute-key-identifiername.js
+
+Mismatch: tasks/coverage/test262/test/language/module-code/import-attributes/import-attribute-key-string-double.js
+
+Mismatch: tasks/coverage/test262/test/language/module-code/import-attributes/import-attribute-key-string-single.js
+
+Mismatch: tasks/coverage/test262/test/language/module-code/import-attributes/import-attribute-many.js
+
+Mismatch: tasks/coverage/test262/test/language/module-code/import-attributes/import-attribute-newlines.js
+
+Mismatch: tasks/coverage/test262/test/language/module-code/import-attributes/import-attribute-trlng-comma.js
+
+Mismatch: tasks/coverage/test262/test/language/module-code/import-attributes/import-attribute-value-string-double.js
+
+Mismatch: tasks/coverage/test262/test/language/module-code/import-attributes/import-attribute-value-string-single.js
 
 Mismatch: tasks/coverage/test262/test/language/statements/for-in/head-lhs-cover.js
 
