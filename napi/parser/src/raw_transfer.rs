@@ -87,7 +87,7 @@ pub unsafe fn parse_sync_raw(
         "Raw transfer is only supported on 64-bit little-endian platforms"
     );
 
-    // SAFETY: This is unsafe. Behavior is undefined. JS side be modifying the underlying buffer, without synchronization.
+    // SAFETY: This is unsafe. Behavior is undefined. JS side may be modifying the underlying buffer, without synchronization.
     let buffer = unsafe { buffer.as_mut() };
     // Check buffer has expected size and alignment
     assert_eq!(buffer.len(), BUFFER_SIZE);
