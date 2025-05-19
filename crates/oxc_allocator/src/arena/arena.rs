@@ -92,7 +92,7 @@ impl<Config: ArenaConfigExt> Arena<Config> {
         };
 
         // SAFETY: TODO
-        let footer_ptr = unsafe { Self::new_chunk(capacity, ChunkFooter::EMPTY) };
+        let footer_ptr = unsafe { Self::new_chunk(capacity, CHUNK_ALIGN, ChunkFooter::EMPTY) };
 
         Self { current_chunk_footer: Cell::new(footer_ptr), _config: PhantomData }
     }
@@ -103,27 +103,29 @@ impl<Config: ArenaConfigExt> Arena<Config> {
     /// TODO
     unsafe fn new_chunk(
         capacity: usize,
+        alignment: usize,
         previous_chunk_ptr: NonNull<ChunkFooter>,
     ) -> NonNull<ChunkFooter> {
         // SAFETY: TODO
         unsafe {
             // Allocate a slice of memory, large enough for `capacity` bytes + chunk footer
             let size = capacity + FOOTER_SIZE;
-            let layout = Layout::from_size_align_unchecked(size, CHUNK_ALIGN);
+            let layout = Layout::from_size_align_unchecked(size, alignment);
             let start_ptr = alloc::alloc(layout);
             let start_ptr = NonNull::new(start_ptr).expect("Allocating chunk failed");
 
             // The `ChunkFooter` is at the end of the chunk
             let footer_ptr = start_ptr.add(capacity).cast::<ChunkFooter>();
 
-            debug_assert_eq!((start_ptr.as_ptr() as usize) % CHUNK_ALIGN, 0);
-            debug_assert_eq!((footer_ptr.as_ptr() as usize) % CHUNK_ALIGN, 0);
+            debug_assert_eq!((start_ptr.as_ptr() as usize) % alignment, 0);
+            debug_assert_eq!((footer_ptr.as_ptr() as usize) % alignment, 0);
 
             let footer = ChunkFooter {
                 start: start_ptr,
                 // Cursor starts at end of the range
                 cursor: footer_ptr.cast::<u8>(),
                 previous_chunk: previous_chunk_ptr,
+                alignment,
             };
             footer_ptr.write(footer);
 

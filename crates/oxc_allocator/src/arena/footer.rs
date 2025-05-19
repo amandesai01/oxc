@@ -18,6 +18,8 @@ pub struct ChunkFooter {
     /// The last node in the `prev` linked list is the canonical empty chunk [`EMPTY_CHUNK`],
     /// whose `previous_chunk` link points to itself.
     pub previous_chunk: NonNull<ChunkFooter>,
+    /// Alignment this chunk was allocated with.
+    pub alignment: usize,
 }
 
 /// A wrapper type for the canonical, statically allocated empty chunk.
@@ -41,6 +43,7 @@ static EMPTY_CHUNK: EmptyChunkFooter = EmptyChunkFooter(ChunkFooter {
     start: EMPTY_CHUNK_PTR.cast::<u8>(),
     previous_chunk: EMPTY_CHUNK_PTR,
     cursor: EMPTY_CHUNK_PTR.cast::<u8>(),
+    alignment: CHUNK_ALIGN,
 });
 
 impl ChunkFooter {
@@ -76,9 +79,9 @@ impl ChunkFooter {
         let end_ptr = unsafe { ptr::from_ref(self).cast::<u8>().add(FOOTER_SIZE) };
         // SAFETY: `self.start` is always before `self`, and both are within same allocation
         let size = unsafe { end_ptr.offset_from_usize(start_ptr) };
-        // SAFETY:
-        // All chunks are allocated with alignment of CHUNK_ALIGN
-        let layout = unsafe { Layout::from_size_align_unchecked(size, CHUNK_ALIGN) };
+        // SAFETY: If this chunk was allocated, must be a valid layout.
+        // `EMPTY_CHUNK` also produces a valid `Layout`.
+        let layout = unsafe { Layout::from_size_align_unchecked(size, self.alignment) };
         (start_ptr, layout)
     }
 }
